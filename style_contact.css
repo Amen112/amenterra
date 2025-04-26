@@ -1,0 +1,87 @@
+@keyframes fadeInPage {
+    0% {
+      opacity: 0;
+      transform: scale(1.02);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient( #9e9e9ea5, #8181813f);
+    color: #333;
+    /* Animation globale */
+    opacity: 0;
+    animation: fadeInPage 1s ease-out forwards;
+}
+  
+* {
+    box-sizing: border-box;
+}
+
+.top-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5em;
+    background: linear-gradient(#7d7d7dac, #0b5f0f36);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+}
+
+.nav-left, .nav-right {
+    display: flex;
+    gap: 1em;
+}
+
+.nav-left a,
+.nav-right a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.logo {
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    object-fit: contain;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+header {
+    height: 30vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.localisation {
+    text-align: left;
+    margin: 10px;
+}
+
+.carte iframe {
+    align-items: left;
+    width: 90%;
+    max-width: 600px;
+    height: 400px;
+    border: 2px solid #f3f3f3;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+footer {
+    background-color: #0b5f0f;
+    color: white;
+    text-align: center;
+    padding: 1em;
+}
