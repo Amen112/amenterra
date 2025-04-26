@@ -126,7 +126,7 @@ header {
 }
 
 .header-left .logo {
-  height: 250px;
+  height: 30svh;
   width: auto;
   object-fit: contain;
 }
