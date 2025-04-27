@@ -39,11 +39,9 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0.5em;
-  background: rgba(0, 0, 0, 0.211); /* semi-transparent pour fond image */
+  padding: 0.5rem 1.5rem;
+  background: rgba(0, 0, 0, 0.222); /* semi-transparent pour fond image */
   position: fixed;
-  top: 0;
-  left: 0;
   width: 100%;
   z-index: 10;
 }
