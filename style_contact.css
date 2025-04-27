@@ -267,6 +267,7 @@ form {
     .contact-container {
         flex-direction: column;
         align-items: center;
+        max-width: 90%;
     }
 
     .contact-container form, 
