@@ -284,7 +284,7 @@ header {
   text-decoration: none;
   font-size: 0.75rem;
   transition: background 0.3s ease;
-  position: relative;0
+  position: relative;
 }
 
 .btn:hover {
@@ -1198,3 +1198,63 @@ footer {
   padding: 1em;
 }
 
+/* ------ Responsive Smartphone ------ */
+@media screen and (max-width: 768px) {
+  .top-nav {
+    flex-direction: column;
+    padding: 1em;
+  }
+
+  .nav-left, .nav-right {
+    flex-direction: column;
+    gap: 0.5em;
+    align-items: center;
+  }
+
+  header {
+    height: auto;
+    padding: 5em 1em 2em 1em;
+    background-position: center;
+  }
+
+  .header-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 1em;
+  }
+
+  .header-right h1 {
+    font-size: 6vw;
+  }
+
+  .header-right p {
+    font-size: 4vw;
+  }
+
+  .header-left .logo {
+    height: 40vw;
+  }
+
+  .section-content {
+    flex-direction: column;
+  }
+
+  .section-text, .section-image {
+    max-width: 100%;
+  }
+
+  .section-image .image {
+    width: 80vw;
+    height: auto;
+  }
+
+  .service-card {
+    width: 80%;
+    height: auto;
+  }
+
+  .scene {
+    width: 90%;
+    height: auto;
+  }
+}
