@@ -11,7 +11,7 @@
 body {
     margin: 0;
     font-family: 'Segoe UI', sans-serif;
-    background: linear-gradient( #9e9e9ea5, #8181813f);
+    background: white;
     color: #333;
     /* Animation globale */
     opacity: 0;
@@ -27,12 +27,9 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 0.5em;
-    background: linear-gradient(#7d7d7dac, #0b5f0f36);
-    position: fixed;
-    top: 0;
-    left: 0;
+    background: #0b5f0f;
+    position: relative;
     width: 100%;
-    z-index: 10;
 }
 
 .nav-left, .nav-right {
@@ -55,25 +52,45 @@ body {
     object-fit: contain;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
-header {
-    height: 30vh;
-    position: relative;
+.contact-container {
     display: flex;
-    align-items: center;
     justify-content: center;
-    overflow: hidden;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 40px;
+    max-width: 100%;
+    margin-top: 0;
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: white;
+}
+.contact-container form {
+    flex: 1 1 45%;
+}
+.contact-container .localisation {
+    flex: 1 1 45%;
 }
 
 .localisation {
-    text-align: left;
-    margin: 10px;
+    align-items: center;
+    margin-left: 20px;
+}
+.localisation h2 {
+    text-align: center;
+    color: #0b5f0f;
+    margin-bottom: 30px;
+}
+.localisation p {
+    margin: 5px 0;
+    font-size: 1rem;
+    color: #333;
 }
 
 .carte iframe {
-    align-items: left;
+    align-items: center;
     width: 90%;
     max-width: 600px;
-    height: 400px;
+    height: 500px;
     border: 2px solid #f3f3f3;
     border-radius: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -85,65 +102,176 @@ footer {
     text-align: center;
     padding: 1em;
 }
-
+/* Style général du formulaire */
+form {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 15px;
+    border-radius: 10px;
+    font-family: Arial, sans-serif;
+  }
+  form h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #0b5f0f;
+  }
+  /* Style des champs */
+  form input[type="text"],
+  form input[type="email"],
+  form textarea {
+    width: 100%;
+    padding: 12px 15px;
+    margin: 8px 0 20px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-sizing: border-box;
+    font-size: 16px;
+  }
+  
+  /* Style du bouton */
+  form button {
+    width: 100%;
+    background-color: #0b5f0f;
+    color: white;
+    padding: 14px 20px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+  }
+  
+  form button:hover {
+    background-color: #45a049;
+  }
+  
+  /* Style des labels */
+  form label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+  }
+  
+  /* Responsive smartphone */
+  @media (max-width: 600px) {
+    form {
+      margin: 20px;
+      padding: 15px;
+    }
+  }
+/*_______________Card-Contact_______________*/
+.card {
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 20px;
+  }
+  
+  /* for all social containers*/
+  .socialContainer {
+    width: 52px;
+    height: 52px;
+    background-color: #0b5f0f;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    transition-duration: 0.3s;
+    border-radius: 30px;
+  }
+  /* instagram*/
+  .containerOne:hover {
+    background-color: #d62976;
+    transition-duration: 0.3s;
+    transform: scale(1.2);
+  }
+  /* twitter*/
+  .containerTwo:hover {
+    background-color: #f90101;
+    transition-duration: 1.2s;
+  }
+  /* linkdin*/
+  .containerThree:hover {
+    background-color: #0072b1;
+    transition-duration: 0.3s;
+    transform: scale(1.2);
+  }
+  /* Whatsapp*/
+  .containerFour:hover {
+    background-color: #128c7e;
+    transition-duration: 0.3s;
+    transform: scale(1.2);
+  }
+  
+  .socialContainer:active {
+    transform: scale(0.9);
+    transition-duration: 0.3s;
+  }
+  
+  .socialSvg {
+    width: 17px;
+  }
+  
+  .socialSvg path {
+    fill: rgb(255, 255, 255);
+  }
+  
+  .socialContainer:hover .socialSvg {
+    animation: slide-in-top 0.3s both;
+  }
+  
+  @keyframes slide-in-top {
+    0% {
+      transform: translateY(-50px);
+      opacity: 0;
+    }
+  
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
 /* ------ Responsive Smartphone ------ */
 @media screen and (max-width: 768px) {
     .top-nav {
-      flex-direction: column;
+      flex-direction: line;
       padding: 1em;
     }
   
     .nav-left, .nav-right {
-      flex-direction: column;
+      flex-direction: line;
       gap: 0.5em;
       align-items: center;
     }
-  
-    header {
-      height: auto;
-      padding: 5em 1em 2em 1em;
-      background-position: center;
+    
+    .nav-left a,
+    .nav-right a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 0.5rem;
     }
-  
-    .header-content {
-      flex-direction: column;
-      text-align: center;
-      gap: 1em;
+    
+    .logo {
+      height: 8vw;
+      width: 8vw;
+      border-radius: 50%;
+      object-fit: contain;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
     }
-  
-    .header-right h1 {
-      font-size: 6vw;
+    .contact-container {
+        flex-direction: column;
+        align-items: center;
     }
-  
-    .header-right p {
-      font-size: 4vw;
+
+    .contact-container form, 
+    .contact-container .localisation {
+        flex: 1 1 100%;
+        width: 100%;
     }
-  
-    .header-left .logo {
-      height: 40vw;
-    }
-  
-    .section-content {
-      flex-direction: column;
-    }
-  
-    .section-text, .section-image {
-      max-width: 100%;
-    }
-  
-    .section-image .image {
-      width: 80vw;
-      height: auto;
-    }
-  
-    .service-card {
-      width: 80%;
-      height: auto;
-    }
-  
-    .scene {
-      width: 90%;
-      height: auto;
-    }
-  }
-  
+}
