@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: https://amen112.github.io/sitemap.xml
+Sitemap: https://amen112.github.io/amenterra/sitemap.xml
