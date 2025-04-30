@@ -19,11 +19,14 @@
     transform: translateY(0);
   }
 }
+html {
+  scroll-behavior: smooth;
+}
 
 body {
   margin: 0;
   font-family: 'Segoe UI', sans-serif;
-  background-color: #efefef;
+  background-color: white;
   color: #333;
   /* Animation globale */
   opacity: 0;
@@ -93,6 +96,33 @@ header {
   justify-content: center;
   overflow: hidden;
 }
+.header-services {
+  background: url('images/background8.png') no-repeat center center/cover;
+  background-blend-mode: multiply;
+  background-color: rgba(167, 167, 167, 0.35); /* Légère teinte gris foncé pour améliorer la lisibilité */
+  height: 50vh; /* Augmenté pour donner plus d’impact */
+  display: flex; /* Ajouté pour centrer le contenu */
+  flex-direction: column;
+  gap: 15px;
+  clip-path: ellipse(100% 85% at 35% 15%); /* Centré pour un rendu plus naturel */
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 20px; /* Ajout de padding latéral pour mobile */
+}
+
+.header-services h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #ffffff;
+  margin: 0;
+}
+
+.header-services p {
+  font-size: 1rem;
+  color: #ffffff;
+  max-width: 600px;
+}
 .header-content {
   display: flex;
   align-items: center;
@@ -141,7 +171,6 @@ header {
 /* ----------------------------------------------------------SECTION---------------------------------------------------------*/
 #apropos {
   padding: 3em 2em;
-  background-color: white;
 }
 
 .section p {
@@ -215,7 +244,7 @@ header {
 /*-------------------------------------------------------------SERVICES---------------------------------------------------------*/
 #services {
   padding: 1em 2em;
-  background-color: rgb(236, 236, 236);
+  background-color:#efefef;
 }
 
 .galerie-services {
@@ -298,11 +327,20 @@ header {
 .service-card:hover {
   transform: scale(1.05);
 }
-
+#cartographie, #digitalisation, #formation {
+  padding: 3em 2em;
+  margin-left: 30%;
+  text-align: justify;
+}
+#analyse-spatiale, #appui-decision {
+  padding: 3em 2em;
+  margin-right: 30%;
+  background-color: #efefef84;
+  align-items: center;
+}
 /* ---------------------------------------------Projets-------------------------------------------------- */
 #projets {
   padding: 3em 2em;
-  background-color: white;
   align-items: center;
 }
 
@@ -1114,6 +1152,7 @@ header {
 #contact {
   padding: 2em 2em;
   align-items: center;
+  background-color: #efefef;
 }
 .card {
   background-color: transparent;
