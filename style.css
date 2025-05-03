@@ -88,19 +88,27 @@ body {
 
 /* ------------------------------------------------------------HEADER---------------------------------------------------------*/
 header {
-  background: url('images/background8.png') no-repeat center center/cover;
+  background-blend-mode: multiply;
+  background: url('images/Header_main\ \(2\).jpg') no-repeat center center/cover;
+  background-color: rgba(114, 114, 114, 0.35); 
   height: 100vh;
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
+  clip-path: ellipse(75% 90% at 35% 5%); /* Centré pour un rendu plus naturel */
   overflow: hidden;
 }
 .header-services {
-  background: url('images/background8.png') no-repeat center center/cover;
+  background: url('images/background-services.jpg') no-repeat center center/cover;
+}
+.header-projets {
+  background: url('images/background_projets\ \(2\).jpg') no-repeat center center/cover;
+}
+.header-services, .header-projets {
   background-blend-mode: multiply;
-  background-color: rgba(167, 167, 167, 0.35); /* Légère teinte gris foncé pour améliorer la lisibilité */
-  height: 50vh; /* Augmenté pour donner plus d’impact */
+  background-color: rgba(114, 114, 114, 0.35); /* Légère teinte gris foncé pour améliorer la lisibilité */
+  height: 60vh; /* Augmenté pour donner plus d’impact */
   display: flex; /* Ajouté pour centrer le contenu */
   flex-direction: column;
   gap: 15px;
@@ -111,14 +119,20 @@ header {
   padding: 0 20px; /* Ajout de padding latéral pour mobile */
 }
 
-.header-services h1 {
+.header-services h1, .header-projets h1 {
   font-size: 2rem;
   font-weight: bold;
   color: #ffffff;
   margin: 0;
 }
 
-.header-services p {
+.header-services h2, .header-projets h2 {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #ffffff;
+  margin: 0;
+}
+.header-services p, .header-projets p {
   font-size: 1rem;
   color: #ffffff;
   max-width: 600px;
@@ -158,7 +172,7 @@ header {
   width: auto;
   object-fit: contain;
 }
-
+/*
 .wave-header {
   position:absolute;
   bottom: 0;
@@ -166,7 +180,7 @@ header {
   width: 100%;
   height: 250px;
   z-index: 0;
-}
+}*/
 
 /* ----------------------------------------------------------SECTION---------------------------------------------------------*/
 #apropos {
@@ -328,6 +342,7 @@ header {
   transform: scale(1.05);
 }
 #cartographie, #digitalisation, #formation {
+  
   padding: 3em 2em;
   margin-left: 30%;
   text-align: justify;
