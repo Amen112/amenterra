@@ -101,14 +101,16 @@ header {
 }
 .header-services {
   background: url('images/background-services.jpg') no-repeat center center/cover;
+  height: 100vh;
+
 }
 .header-projets {
   background: url('images/background_projets\ \(2\).jpg') no-repeat center center/cover;
+  height: 60vh;
 }
 .header-services, .header-projets {
   background-blend-mode: multiply;
   background-color: rgba(114, 114, 114, 0.35); /* Légère teinte gris foncé pour améliorer la lisibilité */
-  height: 60vh; /* Augmenté pour donner plus d’impact */
   display: flex; /* Ajouté pour centrer le contenu */
   flex-direction: column;
   gap: 15px;
@@ -332,39 +334,57 @@ header {
 .service-card:hover {
   transform: scale(1.05);
 }
-.services{
-  justify-content: center;
-  align-items: center;
-  gap: 20px;
-  max-width: 100%;
-  margin-top: 0;
-  margin-bottom: 20px;
-  overflow: hidden;
-}
-
-background-strip {
-  position: absolute;
-  background: url('images/background_projets\ \(2\).jpg') no-repeat center center/cover;
-  z-index: -1;
-}
 
 #cartographie, #digitalisation, #formation {
-  padding: 3em 2em;
-  margin-bottom: 10px;
-  margin-left: 30%;
   background-color:#ffffffdb;
-  text-align: justify;
-}
-#cartographie{
-  margin-top: 10px;
 }
 #analyse-spatiale, #appui-decision {
-  padding: 3em 2em;
-  margin-bottom: 10px;
-  margin-right: 25%;
   background-color:#efefefe7;
-  align-items: left;
 }
+.service-section {
+  margin: 0;
+  padding: 0;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.service-content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.service-text {
+  width:40%;
+  height: auto;
+  padding: 20px;
+}
+
+.service-text h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #111;
+}
+
+.service-text p {
+  font-size: 1.1rem;
+  margin-bottom: 15px;
+}
+
+.service-text ul {
+  list-style: disc;
+  padding-left: 20px;
+  line-height: 1.6;
+}
+
+.service-image {
+  width: 60%;
+  text-align: center;
+}
+.service-image img {
+  margin:0 auto;
+  max-height:80vh;
+}
+
 /* ---------------------------------------------Projets-------------------------------------------------- */
 #projets {
   padding: 3em 2em;
@@ -1255,12 +1275,6 @@ background-strip {
 }
 
 /* ------------------------------------------------------------FOOTER---------------------------------------------------------*/
-/*footer {
-  background-color: #0b5f0f;
-  color: white;
-  text-align: center;
-  padding: 1em;
-}*/
 .footer {
   background-color: #0b590f;
   color: #fff;
